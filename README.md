@@ -1,21 +1,24 @@
-## Generative Agents: Interactive Simulacra of Human Behavior
+# Generative Agents: Interactive Simulacra of Human Behavior
 
 <p align="center" width="100%">
 <img src="cover.png" alt="Smallville" style="width: 80%; min-width: 300px; display: block; margin: auto;">
 </p>
 
-This repository is derived from "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)." It contains our core simulation module for  generative agents—computational agents that simulate believable human behaviors—and their game environment.
+This repository is derived from "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)." It contains our core simulation module for generative agents—computational agents that simulate believable human behaviors—and their game environment.
 
-# Setting Up the Environment！
+## Setting Up the Environment
+
 To set up your environment, you will need to generate a `utils.py` file that contains your OpenAI API key and download the necessary packages.
 
 ### Step 1. Generate Utils File
+
 In the `reverie/backend_server` folder (where `reverie.py` is located), create a new file titled `utils.py` and copy and paste the content below into the file:
-```
+
+```python
 # Copy and paste your OpenAI API Key
-openai_api_key = "<Your OpenAI API>"
+openai_api_key = "<Your OpenAI API Key>"
 # Put your name
-key_owner = "<Name>"
+key_owner = "<Your Name>"
 
 maze_assets_loc = "../../environment/frontend_server/static_dirs/assets"
 env_matrix = f"{maze_assets_loc}/the_ville/matrix"
@@ -26,7 +29,7 @@ fs_temp_storage = "../../environment/frontend_server/temp_storage"
 
 collision_block_id = "32125"
 
-# Verbose 
+# Verbose
 debug = True
 ```
 Replace `<Your OpenAI API>` with your OpenAI API key, and `<name>` with your name.
@@ -62,7 +65,6 @@ On your browser, navigate to [http://localhost:8000/simulator_home](http://local
     run <step-count>
 Note that you will want to replace `<step-count>` above with an integer indicating the number of game steps you want to simulate. For instance, if you want to simulate 100 game steps, you should input `run 100`. One game step represents 10 seconds in the game.
 
-
 Your simulation should be running, and you will see the agents moving on the map in your browser. Once the simulation finishes running, the "Enter option" prompt will re-appear. At this point, you can simulate more steps by re-entering the run command with your desired game steps, exit the simulation without saving by typing `exit`, or save and exit by typing `fin`.
 
 The saved simulation can be accessed the next time you run the simulation server by providing the name of your simulation as the forked simulation. This will allow you to restart your simulation from the point where you left off.
@@ -84,7 +86,8 @@ We've noticed that OpenAI's API can hang when it reaches the hourly rate limit. 
 
 All simulations that you save will be located in `environment/frontend_server/storage`, and all compressed demos will be located in `environment/frontend_server/compressed_storage`. 
 
-There are two ways to optionally customize your simulations. 
+
+## There are two ways to optionally customize your simulations. 
 
 ### Author and Load Agent History
 First is to initialize agents with unique history at the start of the simulation. To do this, you would want to 1) start your simulation using one of the base simulations, and 2) author and load agent history. More specifically, here are the steps:
@@ -104,10 +107,7 @@ To customize the initialization by authoring your own history file, place your f
 ### Create New Base Simulations
 For a more involved customization, you will need to author your own base simulation files. The most straightforward approach would be to copy and paste an existing base simulation folder, renaming and editing it according to your requirements. This process will be simpler if you decide to keep the agent names unchanged. However, if you wish to change their names or increase the number of agents that the Smallville map can accommodate, you might need to directly edit the map using the [Tiled](https://www.mapeditor.org/) map editor.
 
-
-## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Eddy_Lin.png" alt="Generative Eddy">   Authors and Citation 
-
-**Authors:** Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein
+Original Authors: Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein
 
 Citation of the original work if you use the code or data in this repository. 
 ```
