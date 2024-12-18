@@ -1,6 +1,4 @@
-
-
-# Generative Agents: Interactive Simulacra of Human Behavior 
+## Generative Agents: Interactive Simulacra of Human Behavior
 
 <p align="center" width="100%">
 <img src="cover.png" alt="Smallville" style="width: 80%; min-width: 300px; display: block; margin: auto;">
@@ -8,7 +6,7 @@
 
 This repository is derived from "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)." It contains our core simulation module for  generative agents—computational agents that simulate believable human behaviors—and their game environment.
 
-## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Isabella_Rodriguez.png" alt="Generative Isabella">   Setting Up the Environment 
+# Setting Up the Environment！
 To set up your environment, you will need to generate a `utils.py` file that contains your OpenAI API key and download the necessary packages.
 
 ### Step 1. Generate Utils File
@@ -36,7 +34,7 @@ Replace `<Your OpenAI API>` with your OpenAI API key, and `<name>` with your nam
 ### Step 2. Install requirements.txt
 Install everything listed in the `requirements.txt` file (I strongly recommend first setting up a virtualenv as usual). A note on Python version: we tested our environment on Python 3.9.12. 
 
-## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Klaus_Mueller.png" alt="Generative Klaus">   Running a Simulation 
+# Running a Simulation！
 To run a new simulation, you will need to concurrently start two servers: the environment server and the agent simulation server.
 
 ### Step 1. Starting the Environment Server
@@ -84,11 +82,7 @@ To start the demo, go to the following address on your browser: `http://localhos
 ### Tips
 We've noticed that OpenAI's API can hang when it reaches the hourly rate limit. When this happens, you may need to restart your simulation. For now, we recommend saving your simulation often as you progress to ensure that you lose as little of the simulation as possible when you do need to stop and rerun it. Running these simulations, at least as of early 2023, could be somewhat costly, especially when there are many agents in the environment.
 
-## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Maria_Lopez.png" alt="Generative Maria">   Simulation Storage Location
 All simulations that you save will be located in `environment/frontend_server/storage`, and all compressed demos will be located in `environment/frontend_server/compressed_storage`. 
-
-## <img src="https://joonsungpark.s3.amazonaws.com:443/static/assets/characters/profile/Sam_Moore.png" alt="Generative Sam">   Customization
-
 
 There are two ways to optionally customize your simulations. 
 
